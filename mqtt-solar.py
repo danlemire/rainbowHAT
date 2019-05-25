@@ -12,7 +12,7 @@ HUE_HIGH = 0
 #this variable keeps things running until set to false by touching 'A'
 running = True
 
-@rainbowhat.touch.A.press()
+@rh.touch.A.press()
 def touch_a(channel):
     global running
     running = False
