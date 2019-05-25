@@ -22,7 +22,16 @@ def touch_a(channel):
 def on_message(client, userdata, message):
     global txt
     txt = float(message.payload.decode("utf-8"))
-  
+    print("message received " ,txt)
+    print("message topic=",message.topic)
+    print("message qos=",message.qos)
+    print("message retain flag=",message.retain)
+    rh.display.clear()
+    rh.display.set_decimal(1, True)
+    rh.display.print_float(txt)
+    rh.display.show()
+    set_rainbow(int(txt));
+
 ########################################
 
 ########################################
@@ -57,9 +66,9 @@ try:
         #set_rainbow(pressure)
         #rainbowhat.display.print_float(pressure)
         #rainbowhat.display.show()
-
-        time.sleep(1)
         client.loop_forever() #stop the loop
+        time.sleep(1)
+
 except KeyboardInterrupt:
     pass
 
