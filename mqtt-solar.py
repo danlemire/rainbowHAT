@@ -52,15 +52,7 @@ client.publish("feeds/helloworld","OFF")
 
 try:
     while running:          	
-        print("message received " ,txt)
-        print("message topic=",message.topic)
-        print("message qos=",message.qos)
-        print("message retain flag=",message.retain)
-        rh.display.clear()
-        rh.display.set_decimal(1, True)
-        rh.display.print_float(txt)
-        rh.display.show()
-        set_rainbow(int(txt));
+
         
         #pressure = rainbowhat.weather.pressure()
         #set_rainbow(pressure)
