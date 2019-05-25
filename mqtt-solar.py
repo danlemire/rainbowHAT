@@ -50,7 +50,7 @@ try:
         rh.display.set_decimal(1, True)
         rh.display.print_float(txt)
         rh.display.show()
-        set_rainbow(int(txt);
+        set_rainbow(int(txt));
         
         #pressure = rainbowhat.weather.pressure()
         #set_rainbow(pressure)
