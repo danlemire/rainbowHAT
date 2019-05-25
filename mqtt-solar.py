@@ -11,7 +11,7 @@ HUE_HIGH = 0
 
 #this variable keeps things running until set to false by touching 'A'
 running = True
-
+txt = 0
 @rh.touch.A.press()
 def touch_a(channel):
     global running
@@ -20,6 +20,7 @@ def touch_a(channel):
 
 ############
 def on_message(client, userdata, message):
+    global txt
     txt = float(message.payload.decode("utf-8"))
   
 ########################################
