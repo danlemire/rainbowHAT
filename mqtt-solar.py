@@ -31,7 +31,9 @@ def on_message(client, userdata, message):
     rh.display.print_float(txt)
     rh.display.show()
     set_rainbow(int(txt));
-
+    
+    rh.rainbow.set_pixel(1, 255, 255, b, brightness=0.1)
+    rh.rainbow.show()
 ########################################
 
 ########################################
